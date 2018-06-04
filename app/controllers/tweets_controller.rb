@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.page(params[:page]).per(10)
   end
 
   def show
@@ -17,5 +17,4 @@ class TweetsController < ApplicationController
 
     redirect_to '/tweets/index'
   end
-
 end
