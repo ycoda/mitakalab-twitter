@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        location: 住んでる場所
+        about: 自己紹介
+      tweet:
+        title: タイトル
+        content: コンテンツ
