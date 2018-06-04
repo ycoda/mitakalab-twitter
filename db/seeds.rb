@@ -19,3 +19,7 @@
 @user.location = 'Tottori, Japan'
 @user.about = 'Nice to meet you. I am from database!'
 @user.save
+
+100.times do |n|
+  Tweet.create( title: "title#{n + 1}", content: "tweet#{n + 1}")
+end
