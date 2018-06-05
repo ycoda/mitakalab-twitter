@@ -9,7 +9,10 @@ gem "rails", '~> 5.2.0'
 gem 'sqlite3'
 gem 'haml-rails'
 gem 'kaminari'
-
+gem 'devise'
+gem 'omniauth-twitter'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem "google-cloud-storage", "~> 1.3", require: false
 
 # Use Puma as the app server
 # gem 'puma', '~> 3.11'
