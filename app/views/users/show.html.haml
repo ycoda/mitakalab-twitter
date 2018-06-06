@@ -1,5 +1,6 @@
-%h1= @user[:name]
-%p= @user[:username]
+%h3 Email: #{ @user[:email] }
 %ul
   %li #{ t('activerecord.attributes.user.location') } : #{ @user[:location] }
   %li #{ t('activerecord.attributes.user.about') }    : #{ @user[:about] }
+
+= link_to 'indexへ移動する', users_index_path
