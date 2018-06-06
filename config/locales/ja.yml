@@ -2,8 +2,7 @@ ja:
   activerecord:
     attributes:
       user:
-        location: 住んでる場所
-        about: 自己紹介
+        username: ユーザー名
       tweet:
         title: タイトル
         content: コンテンツ
