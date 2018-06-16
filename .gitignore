@@ -31,3 +31,5 @@
 
 # Ignore vendor/bundle
 /vendor
+
+.env
