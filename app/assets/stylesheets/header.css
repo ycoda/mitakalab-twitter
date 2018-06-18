@@ -12,3 +12,12 @@ header {
 .nav strong {
   margin-right: 1em;qqqqq
 }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  margin-right: 1em;
+}
