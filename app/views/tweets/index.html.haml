@@ -1,7 +1,9 @@
 = link_to 'つぶやく', new_tweet_path
 
-- @tweets.each do |tweet|
-  %h3= tweet.title
-  %p= tweet.content
+- if @tweets.present?
+  - @tweets.each do |tweet|
+    %h3= tweet.title
+    %p= tweet.content
+    = link_to 'ツイートを削除する', tweet_path(tweet), method: :delete
 
 = paginate @tweets
