@@ -5,7 +5,7 @@
     %title MitakalabTwitter
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %header
@@ -17,7 +17,7 @@
           - else
             = image_tag('default_icon.png', size: '45x45')
 
-          -if current_user.username
+          - if current_user.username
             %strong= current_user.username
           - else
             %strong= current_user.name

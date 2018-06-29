@@ -8,7 +8,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if @user.save
       sign_in_and_redirect @user, :event => :authentication
     else
-      render new_user_session_path
+      render new_user_registration_path
     end
   end
 
@@ -20,6 +20,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :avatar)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :avatar)
   end
 end
