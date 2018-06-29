@@ -1,19 +1,21 @@
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :controller do
-
-  describe "GET #index" do
-    it "returns http success" do
-      get :index
-      expect(response).to have_http_status(:success)
+RSpec.describe Users::SessionsController, type: :controller do
+  before do
+    @request.env["devise.mapping"] = Devise.mappings[:user]
+  end
+  context "#new" do
+    it "200レスポンスを返すこと" do
+      get :new
+      expect(response).to be_successful
     end
   end
 
-  describe "GET #show" do
-    it "returns http success" do
-      get :show
-      expect(response).to have_http_status(:success)
+  context "#create" do
+    it "200レスポンスを返すこと" do
+      @user = create(:user)
+      sign_in @user
+      expect(response).to have_http_status "200"
     end
   end
-
 end
