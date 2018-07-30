@@ -34,3 +34,7 @@
 
 .env
 tags
+
+# capistrano
+/config/deploy
+Capfile
